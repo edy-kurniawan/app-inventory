@@ -3,7 +3,7 @@
     <div class="logo-header" data-background-color="blue">
 
         <a href="#" class="logo">
-            <img src="{{ url('atlantis/assets/img/icon.png') }}" alt="navbar brand" class="navbar-brand ml-1">
+            <img src="{{ url('atlantis/assets/img/logo.svg') }}" alt="navbar brand" class="navbar-brand ml-1">
         </a>
         <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
             data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,16 +38,16 @@
                                     <div class="avatar-lg"><img src="{{ url('atlantis/assets/img/profile.jpg') }}" alt="image profile"
                                             class="avatar-img rounded"></div>
                                     <div class="u-text">
-                                        <h4>{{ Session::get('name') }}</h4>
-                                        <a href="http://127.0.0.1:8000/user/profile"
+                                        <h4> {{ Auth::user()->name }}</h4>
+                                        <a href="/user/profile"
                                             class="btn btn-xs btn-secondary btn-sm">View Profile</a>
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
-                            </li>
+                            </li> --}}
                         </div>
                     </ul>
                 </li>

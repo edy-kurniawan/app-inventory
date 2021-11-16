@@ -14,10 +14,14 @@ use App\Http\Controllers\BarangController;
 |
 */
 
-Route::resource('barang', BarangController::class);
+Route::group(['middleware' => 'auth:sanctum'], function() {
+    
+    Route::get('/', function () {
+        return redirect()->route('barang.index');
+    });
 
-Route::get('/', function () {
-    return view('welcome');
+    Route::resource('barang', BarangController::class);
+
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

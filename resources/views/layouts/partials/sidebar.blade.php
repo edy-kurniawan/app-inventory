@@ -9,7 +9,7 @@
                 <div class="info">
                     <a data-toggle="collapse" href="#" aria-expanded="true">
                         <span>
-                            {{ Session::get('name') }}
+                            {{ Auth::user()->name }}
                             <span class="user-level">Welcome</span>
                         </span>
                     </a>

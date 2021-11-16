@@ -29,11 +29,10 @@
                         </div>
                         <div class="col-md-6 col-12 text-right">
                             <button type="hidden" onclick="add()"
-                                class="btn btn-rounded btn-outline-info float-right mb-3"><i class="ti-plus"> </i>
+                                class="btn btn-rounded btn-outline-info float-right mb-3"><i class="fas fa-plus-square"></i>
                                 Tambah</button>
                             <button type="hidden" onclick="reload_table()"
-                                class="btn btn-rounded btn-outline-secondary float-right mb-3 mr-1"><i
-                                    class="ti-reload"> </i> Reload</button>
+                                class="btn btn-rounded btn-outline-secondary float-right mb-3 mr-1"><i class="fas fa-sync"></i> Reload</button>
                         </div>
                     </div>
                 </div>
@@ -162,6 +161,7 @@
             $('#form')[0].reset(); // reset form on modals
             $('#modal-form').modal('show'); // show bootstrap modal
             $('.modal-title').text('Input Data Barang'); // Set Title to Bootstrap modal title
+            $('[name="id"]').val('');
         }
 
         function edit(id){
