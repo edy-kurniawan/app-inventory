@@ -29,12 +29,11 @@
                         </div>
                         <div class="col-md-6 col-12 text-right">
                             <button type="hidden" onclick="add()"
-                            class="btn btn-rounded btn-outline-info float-right mb-3"><i
-                                class="ti-plus"> </i>
-                            Tambah</button>
-                        <button type="hidden" onclick="reload_table()"
-                            class="btn btn-rounded btn-outline-secondary float-right mb-3 mr-1"><i
-                                class="ti-reload"> </i> Reload</button>
+                                class="btn btn-rounded btn-outline-info float-right mb-3"><i class="ti-plus"> </i>
+                                Tambah</button>
+                            <button type="hidden" onclick="reload_table()"
+                                class="btn btn-rounded btn-outline-secondary float-right mb-3 mr-1"><i
+                                    class="ti-reload"> </i> Reload</button>
                         </div>
                     </div>
                 </div>
@@ -117,7 +116,7 @@
 
     function reload_table(){
             table.ajax.reload(null,false);
-        }
+    }
 
         function delete_data(id){
             const swalWithBootstrapButtons = Swal.mixin({
@@ -137,7 +136,7 @@
             }).then((result) => {
                 if (result.value) {
                 $.ajax({
-                    url : "jurnal-harian/" + id,
+                    url : "barang/" + id,
                     type: "DELETE",
                     dataType: "JSON",
                     success: function(data){
@@ -163,6 +162,29 @@
             $('#form')[0].reset(); // reset form on modals
             $('#modal-form').modal('show'); // show bootstrap modal
             $('.modal-title').text('Input Data Barang'); // Set Title to Bootstrap modal title
+        }
+
+        function edit(id){
+            $('#form')[0].reset(); // reset form on modals
+            $('[name="id"]').val('');
+            //Ajax Load data from ajax
+            $.ajax({
+            url : "barang/" + id,
+            type: "GET",
+            dataType: "JSON",
+            success: function(data) {
+                $('[name="id"]').val(data.id);
+                $('[name="nama"]').val(data.nama);
+                $('[name="satuan"]').val(data.satuan);
+                $('[name="pemasukan"]').val(data.pemasukan);
+                $('[name="pengeluaran"]').val(data.pengeluaran);
+                $('#modal-form').modal('show'); // show bootstrap modal when complete loaded
+                $('.modal-title').text('Edit Data Barang'); // Set title to Bootstrap modal title   
+            },
+            error: function (jqXHR, textStatus , errorThrown) {
+                alert(errorThrown);
+            }
+            });
         }
 
         function save(){

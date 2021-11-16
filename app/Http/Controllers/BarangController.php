@@ -32,8 +32,8 @@ class BarangController extends Controller
                 })
                 ->addColumn('action', function ($data) {
                     $actionBtn = '
-                    <a href="javascript:void(0)" class="btn btn-outline-warning btn-sm" data-toggle="tooltip" data-placement="top" title="EDIT" onclick="edit(/' . $data->id . '/)"><i class="fas fa-edit"></i></a>
-                    <a href="javascript:void(0)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="HAPUS" onclick="hapus(/' . $data->id . '/)"><i class="fas fa-trash"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-outline-warning btn-sm" data-toggle="tooltip" data-placement="top" title="EDIT" onclick="edit(' . $data->id . ')"><i class="fas fa-edit"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="HAPUS" onclick="delete_data(' . $data->id . ')"><i class="fas fa-trash"></i></a>
                     ';
 
                     return $actionBtn;

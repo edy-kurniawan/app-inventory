@@ -3,7 +3,7 @@
     <div class="logo-header" data-background-color="blue">
 
         <a href="#" class="logo">
-            <img src="{{ url('white-logo.png') }}" alt="navbar brand" class="navbar-brand ml-1">
+            <img src="{{ url('atlantis/assets/img/icon.png') }}" alt="navbar brand" class="navbar-brand ml-1">
         </a>
         <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
             data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
