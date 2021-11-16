@@ -20,48 +20,12 @@
                     <span class="sidebar-mini-icon">
                         <i class="fa fa-ellipsis-h"></i>
                     </span>
-                    <h4 class="text-section">Billing</h4>
+                    <h4 class="text-section">Menu</h4>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('jurnal-harian.index') }}">
-                        <i class="flaticon-add-user"></i>
-                        <p>Jurnal Harian</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('user-baru.index') }}">
-                        <i class="flaticon-add-user"></i>
-                        <p>User Baru</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('tagihan-bulanan.index') }}">
-                        <i class="fas fa-money-check-alt"></i>
-                        <p>Tagihan Bulanan</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('user-close.index') }}">
-                        <i class="fas fa-check"></i>
-                        <p>Data User Close</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('user-hold.index') }}">
-                        <i class="fas fa-times"></i>
-                        <p>Data User Hold</p>
-                    </a>
-                </li>
-                <li class="nav-section">
-                    <span class="sidebar-mini-icon">
-                        <i class="fa fa-ellipsis-h"></i>
-                    </span>
-                    <h4 class="text-section">Marketing</h4>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('user-prospek.index') }}">
-                        <i class="fas fa-user-plus"></i>
-                        <p>User Prospek</p>
+                    <a href="">
+                        <i class="flaticon-box-2"></i>
+                        <p>Barang</p>
                     </a>
                 </li>
             </ul>
